@@ -21,6 +21,7 @@ public class Encryption {
         return sb.toString();
     }
     public String B64Encode(String s){
+        
         byte[] encodedBytes = Base64.encode(s.getBytes(), Base64.DEFAULT);
         return new String(encodedBytes, Charset.forName("UTF-8"));
     }
