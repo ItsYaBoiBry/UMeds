@@ -108,10 +108,10 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     }
 
     public void Login() {
-        Encryption encryption = new Encryption();
+//        Encryption encryption = new Encryption();
         Login login = new Login();
         try {
-            String loginresults = encryption.rot_13(encryption.B64Decode(login.execute(etLoginEmail.getText().toString(), etLoginPassword.getText().toString()).get()));
+            String loginresults = login.execute(etLoginEmail.getText().toString(), etLoginPassword.getText().toString()).get();
             Log.e("Registration RESULT:", loginresults);
             JSONObject results = new JSONObject(loginresults);
             if (results.has("Success")) {
@@ -132,11 +132,10 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     }
 
     public void Register() {
-        Encryption encryption = new Encryption();
+//        Encryption encryption = new Encryption();
         Register register = new Register();
         try {
-            String registerresults = encryption.rot_13(
-                    encryption.B64Decode(
+            String registerresults =
                             register.execute(
                                     etFirstName.getText().toString().trim()
                                     , etLastName.getText().toString().trim()
@@ -144,7 +143,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
                                     , etPassword.getText().toString()
                                     , etEmail.getText().toString()
                                     , etMobile.getText().toString()
-                                    , String.valueOf(true)).get()));
+                                    , String.valueOf(true)).get();
             Log.e("Registration RESULT:", registerresults);
             JSONObject results = new JSONObject(registerresults);
             if (results.has("Success")) {

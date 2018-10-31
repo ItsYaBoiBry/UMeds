@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainFragments.FragmentCalendar">
+
+    <RelativeLayout
+        android:id="@+id/rootview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/calendarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <com.applandeo.materialcalendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:datePicker="true"
+                app:daysLabelsColor="@color/black"
+                app:eventsEnabled="true"
+                app:forwardButtonSrc="@drawable/ic_arrow_right"
+                app:headerColor="@color/white"
+                app:headerLabelColor="@color/colorPrimary"
+                app:previousButtonSrc="@drawable/ic_arrow_left"
+                app:selectionColor="@color/colorPrimary"
+                app:todayLabelColor="@color/colorPrimary"
+                app:type="one_day_picker" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="150dp"
+            android:id="@+id/appointsmentlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:id="@+id/appointmentstitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Appointments"
+                android:textSize="20sp" />
+
+            <ScrollView
+                android:id="@+id/scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/appointments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

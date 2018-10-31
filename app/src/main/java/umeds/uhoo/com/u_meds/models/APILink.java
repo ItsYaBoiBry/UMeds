@@ -1,8 +1,8 @@
 package umeds.uhoo.com.u_meds.models;
 
 public class APILink {
-    String hostname = "http://www.bryanlowsk.com/umeds/";
-    String user_dir = "user/";
+    private String hostname = "http://www.bryanlowsk.com/umeds/";
+
     public APILink(){}
     public String login(){
         return get_user_dir()+"login.php";
@@ -10,8 +10,13 @@ public class APILink {
     public String register(){
         return get_user_dir()+"register.php";
     }
-    public String get_user_dir(){
-        return hostname+user_dir;
+    private String get_user_dir(){
+        String user_dir = "user/";
+        return hostname+ user_dir;
+    }
+    public String get_appt_dir(){
+        String appt_dir = "appointments/";
+        return hostname+ appt_dir;
     }
 
 

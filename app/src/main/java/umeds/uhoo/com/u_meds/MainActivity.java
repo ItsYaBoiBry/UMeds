@@ -37,15 +37,13 @@ public class MainActivity extends AppCompatActivity {
                 }else if(status==session.loggedout){
                     startActivity(new Intent(MainActivity.this, ActivityLogin.class));
                     finish();
-                }else{
+                }else {
                     startActivity(new Intent(MainActivity.this, ActivityLogin.class));
                     Toast.makeText(MainActivity.this, "An unexpected error has occurred!", Toast.LENGTH_SHORT).show();
                     finish();
                 }
-
             }
         }, SPLASH_TIME_OUT);
-
     }
     public void setuppage(){
         Session s = new Session(MainActivity.this);
