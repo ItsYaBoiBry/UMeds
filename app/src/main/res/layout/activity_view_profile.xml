@@ -19,7 +19,6 @@
             android:layout_height="@dimen/toolbar_height"
             app:navigationIcon="@drawable/ic_arrow_back"
             app:title="" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -27,6 +26,7 @@
             android:text="Profile"
             android:textColor="@color/colorPrimary"
             android:textSize="17sp" />
+
     </RelativeLayout>
 
     <LinearLayout
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar_layout"
         android:orientation="horizontal"
-        android:weightSum="2">
+        >
 
         <TextView
             android:id="@+id/tab_patients_item"
@@ -59,28 +59,147 @@
         android:layout_height="match_parent"
         android:layout_below="@id/profile_tab">
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/personal_details_tab"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center_horizontal"
             android:orientation="vertical" >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Personal Details"/>
+
+            <!--<android.support.design.card.MaterialCardView-->
+                <!--android:id="@+id/profile_card"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:elevation="10dp"-->
+                <!--app:cardBackgroundColor="@color/white"-->
+                <!--app:cardCornerRadius="5dp">-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/gradient_bg_gp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="horizontal">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="55dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="55dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@drawable/ic_main_stethoscope"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_marginBottom="50dp"/>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="150dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:fontFamily="@font/quicksand_bold"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="General\nPractitioners"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="@color/white"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textSize="20sp" />&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:id="@+id/profile_image"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="100dp"-->
+                        <!--android:layout_height="100dp"-->
+                        <!--android:layout_marginBottom="100dp"-->
+                        <!--android:src="@drawable/logo_blue" />-->
+                    <!---->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:gravity="center">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Doctor Name"/>-->
+                <!--</LinearLayout>-->
+
+
+            <!--</android.support.design.card.MaterialCardView>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/white"
+                android:id="@+id/profile_background"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/documents_tab"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Documents"/>
-        </LinearLayout>
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_blue" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="doctor Name"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="Hospital Name"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="Specialist"/>
+                <!--<android.support.v7.widget.AppCompatRatingBar-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center"-->
+                    <!--android:outlineAmbientShadowColor="@color/black"/>-->
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_round_blue"
+                    android:onClick="onClick"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="40dp"
+                    android:text="Edit Profile"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/documents_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Documents"/>
+    </LinearLayout>
+</RelativeLayout>
 
 
 </RelativeLayout>

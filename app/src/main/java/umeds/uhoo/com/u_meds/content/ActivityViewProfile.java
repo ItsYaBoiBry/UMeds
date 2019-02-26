@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Set;
@@ -14,7 +15,8 @@ import umeds.uhoo.com.u_meds.R;
 public class ActivityViewProfile extends AppCompatActivity {
     Toolbar toolbar;
     TextView tab_patients_item, tab_documents_item;
-    LinearLayout personal_details_tab, documents_tab;
+    LinearLayout documents_tab;
+    RelativeLayout personal_details_tab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

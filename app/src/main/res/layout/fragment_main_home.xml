@@ -49,7 +49,7 @@
                     <ImageView
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:src="@drawable/ic_main_stethoscope" />
+                        android:src="@drawable/ic_main_stethoscope"/>
 
                     <TextView
                         android:layout_width="150dp"
